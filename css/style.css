@@ -1,3 +1,19 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font: 100% Helvetica, sans-serif;
   color: blue;
@@ -15,6 +31,42 @@ nav a {
   display: block;
   padding: 6px 12px;
   text-decoration: none;
+}
+
+.box {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  background-color: lightblue;
+  padding: 20px;
+  margin-top: 20px;
+  width: 200px;
+}
+
+.message, .error, .success {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  border-color: green;
+  background-color: lightgreen;
+}
+
+.error {
+  border-color: red;
+  background-color: lightcoral;
+}
+
+.operator-box {
+  width: 200px;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: lightyellow;
+  border: 2px solid orange;
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */

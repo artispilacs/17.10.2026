@@ -1,4 +1,12 @@
 
+@use "sass:math";
+@import 'reset';
+
+$font-stack: Helvetica, sans-serif;
+$primary-color: blue;
+
+@import 'reset';
+
 $font-stack: Helvetica, sans-serif;
 $primary-color: blue;
 
@@ -23,4 +31,51 @@ nav {
         padding: 6px 12px;
         text-decoration: none;
     }
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+.box {
+    @include border-radius(10px);
+    background-color: lightblue;
+    padding: 20px;
+    margin-top: 20px;
+    width: 200px;
+}
+
+
+.message {
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #333;
+}
+
+.success {
+    @extend .message;
+    border-color: green;
+    background-color: lightgreen;
+}
+
+.error {
+    @extend .message;
+    border-color: red;
+    background-color: lightcoral;
+}
+
+
+$box-width: 400px;
+$columns: 2;
+
+.operator-box {
+    width: math.div($box-width, $columns);
+    padding: 10px + 10px;
+    margin-top: 20px;
+    background-color: lightyellow;
+    border: 2px solid orange;
+    color: black;
 }
